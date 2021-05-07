@@ -22,8 +22,7 @@ export function ListRow({ title, items }: ListRowProps) {
         keyExtractor={(item) => String(item.name)}
         renderItem={({ item }) => (
             <PrimaryCardHero 
-              name={item.name}
-              alterEgo={item.alterEgo}
+              char={item}
             />
         )}
         horizontal

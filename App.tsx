@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
   useFonts,
+  Khula_300Light,
   Khula_400Regular,
   Khula_600SemiBold,
   Khula_700Bold,
@@ -13,6 +14,7 @@ import { Load } from './src/components/Load';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
+    Khula_300Light,
     Khula_400Regular,
     Khula_600SemiBold,
     Khula_700Bold,

@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home } from "../pages/Home";
+import { Details } from "../pages/Details";
 
 import { primaryColors } from "../styles/colors";
 
@@ -21,6 +22,7 @@ const AppRoutes: React.FC = () => (
     >
       
       <stackRoutes.Screen name="Home" component={Home} />
+      <stackRoutes.Screen name="Details" component={Details} />
     </stackRoutes.Navigator>
   </>
 );

@@ -1,60 +1,47 @@
 import React from "react";
+import { useNavigation } from '@react-navigation/native';
 
 import {
   StyleSheet,
   Text,
   View,
   ImageBackground,
-  ImageSourcePropType,
 } from "react-native";
+
 import { LinearGradient } from "expo-linear-gradient";
 
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { CharProps } from "../types";
 
-interface PrimaryCardHeroProps {
-  name: string;
-  alterEgo: string;
+interface CardProps {
+  char: CharProps;
 }
 
-interface ImageProps {
-  [index: string]: ImageSourcePropType; 
-}
+export function PrimaryCardHero({ char }: CardProps) {
+  const navigation = useNavigation();
 
-const charImages: ImageProps = {
-  "Howard Stark": require("../assets/chars/howard-stark.png"),
-  "Mary Jane": require("../assets/chars/mary-jane.png"),
-  "Happy Hogan": require("../assets/chars/happy-hogan.png"),
-  "Homem Aranha": require("../assets/chars/spider-man.png"),
-  "Pantera Negra": require("../assets/chars/black-panther.png"),
-  "Homem de Ferro": require("../assets/chars/iron-man.png"),
-  "Caveira Vermelha": require("../assets/chars/red-skull.png"),
-  "Doutor Destino": require("../assets/chars/dr-doom.png"),
-  "Duende Verde": require("../assets/chars/green-goblin.png"),
-  "Deadpool": require("../assets/chars/deadpool.png"),
-  "Venom": require("../assets/chars/venom.png"),
-  "Justiceiro": require("../assets/chars/punisher.png"),
-  "Thanos": require("../assets/chars/thanos.png"),
-  "Ronan": require("../assets/chars/ronan.png"),
-  "Talos": require("../assets/chars/talos.png"),
-}
-
-export function PrimaryCardHero({ name, alterEgo }: PrimaryCardHeroProps) {
-  const requiredImage = charImages[name];
+  function handleCardPress() {
+    navigation.navigate('Details', { char });
+  }
 
   return (
-    <TouchableOpacity style={styles.container} activeOpacity={0.7}>
-      <ImageBackground source={requiredImage} style={styles.img} borderRadius={20}>
+    <TouchableOpacity 
+      style={styles.container} 
+      activeOpacity={0.7}
+      onPress={handleCardPress}
+    >
+      <ImageBackground source={{ uri: char.imageUri }} style={styles.img} borderRadius={20}>
         <LinearGradient
           colors={["transparent", "rgba(0, 0, 0, 1)"]}
           style={styles.img}
           locations={[0.3, 1]}
         >
             <View style={styles.about}>
-                <Text style={styles.subtitle}>{alterEgo}</Text>
-                <Text style={styles.title}>{name}</Text>
+                <Text style={styles.subtitle}>{char.alterEgo}</Text>
+                <Text style={styles.title}>{char.name}</Text>
             </View>
         </LinearGradient>
       </ImageBackground>
@@ -92,5 +79,4 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     flexWrap: 'wrap'
   },
-
 });
