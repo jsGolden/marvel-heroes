@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Aplicação feita com o objetivo de indexar os grandes heróis presentes na Marvel!",
+    "githubUrl": "https://github.com/jsGolden/marvel-heroes"
   }
 }
