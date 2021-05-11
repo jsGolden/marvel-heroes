@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ViewProps } from 'react-native';
 import colors, { primaryColors } from '../styles/colors';
 
-interface SkillBarProps {
+interface SkillBarProps extends ViewProps {
     value: number;
 }
 
-export default function SkillBar({ value }: SkillBarProps) {
+export default function SkillBar({ value, ...rest }: SkillBarProps) {
 
     const barra = (value: number) => {
         var bar: JSX.Element[] = [];
@@ -30,7 +30,9 @@ export default function SkillBar({ value }: SkillBarProps) {
 
     return (
         <View style={styles.container}>
+            
             {barra(value)}
+            {rest.style}
         </View>
     );
 }

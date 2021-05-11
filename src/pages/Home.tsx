@@ -41,7 +41,7 @@ export function Home() {
           <Text style={styles.subtitle}>Bem vindo ao Marvel Heroes</Text>
           <Text style={styles.title}>Escolha seu personagem</Text>
         </View>
-
+        
         <View style={styles.rows}>
             {apiResponses.map(response => (
                 <ListRow title={response.title} key={response.slug} items={response.items} />
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.khula.bold,
     color: primaryColors.grey,
     fontSize: 14,
+    marginBottom: 15
   },
   title: {
     fontFamily: fonts.khula.extraBold,
