@@ -12,9 +12,10 @@
 </p>
 
 ## 📌 Projeto
-<b>
-Esta aplicação foi criada de acordo com um challenge presente na [@DevChallenge](https://devchallenge.com.br/challenges/5edabfda693fca2236c83cc7/details)
-</b>
+<b>Esta aplicação foi criada de acordo com um challenge presente na</b> 
+
+[@DevChallenge](https://devchallenge.com.br/challenges/5edabfda693fca2236c83cc7/details)
+
 <p>
 O objetivo a mesma é listar personagens presentes no Universo Cinematográfico da Marvel (MCU)
 com a possibilidade de separá-los por raça (humano, alien) e por contexto cinematográfico (anti-herói, vilão).
