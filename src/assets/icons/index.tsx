@@ -1,4 +1,5 @@
 export * from './MarvelIcon';
+export * from './BackIcon';
 
 export * from './AlienIcon';
 export * from './AntiHeroIcon';
