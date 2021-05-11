@@ -13,10 +13,12 @@ import {
   FlatList,
 } from "react-native";
 
-import AgeIcon from "../assets/icons/AgeIcon";
-import HeightIcon from "../assets/icons/HeightIcon";
-import WeightIcon from "../assets/icons/WeightIcon";
-import UniverseIcon from "../assets/icons/UniverseIcon";
+import {
+  AgeIcon,
+  HeightIcon,
+  WeightIcon,
+  UniverseIcon
+} from '../assets/icons';
 
 import colors from "../styles/colors";
 import { AbilitiesProps, CharacteristicsProps, CharProps } from "../types";

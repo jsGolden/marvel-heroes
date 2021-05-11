@@ -19,4 +19,4 @@ function UniverseIcon(props: SvgProps) {
   )
 }
 
-export default UniverseIcon
+export { UniverseIcon };

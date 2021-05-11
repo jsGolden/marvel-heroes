@@ -16,4 +16,4 @@ function AgeIcon(props: SvgProps) {
   )
 }
 
-export default AgeIcon;
+export { AgeIcon };

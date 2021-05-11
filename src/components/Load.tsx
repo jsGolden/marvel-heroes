@@ -1,6 +1,15 @@
 import React from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
-import MarvelIcon from "../assets/icons/MarvelIcon";
+import { 
+  ActivityIndicator, 
+  StyleSheet, 
+  Text, 
+  View 
+} from "react-native";
+
+import { 
+  MarvelIcon,
+} from '../assets/icons/index';
+
 import { primaryColors } from "../styles/colors";
 
 export function Load() {

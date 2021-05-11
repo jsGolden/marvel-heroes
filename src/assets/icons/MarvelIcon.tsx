@@ -9,4 +9,4 @@ function MarvelIcon(props: SvgProps) {
   );
 }
 
-export default MarvelIcon;
+export { MarvelIcon };

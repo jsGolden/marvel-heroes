@@ -19,4 +19,4 @@ function HeightIcon(props: SvgProps) {
   )
 }
 
-export default HeightIcon;
+export { HeightIcon };

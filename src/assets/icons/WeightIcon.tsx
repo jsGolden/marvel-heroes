@@ -1,7 +1,7 @@
 import * as React from "react"
 import Svg, { SvgProps, Path } from "react-native-svg"
 
-function Height(props: SvgProps) {
+function WeightIcon(props: SvgProps) {
   return (
     <Svg
       width={24}
@@ -16,4 +16,4 @@ function Height(props: SvgProps) {
   )
 }
 
-export default Height;
+export { WeightIcon };
